@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arenovation</title>
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="space-between">
+        <div class="header-block container align-center space-between">
+            <a href="#">
+                <img src="assets/img/logo/logo.png" alt="Arenovation" class="logo">
+            </a>
+
+            <nav class="gap-20 header-nav align-center">
+                <a href="#about" class="nav-link text-white mobile-none">О нас</a>
+                <a href="#services" class="nav-link text-white mobile-none">Услуги</a>
+                <a href="#portfolio" class="nav-link text-white mobile-none">Портфолио</a>
+                <a href="#reviews" class="nav-link text-white mobile-none">Отзывы</a>
+                <button onclick="openModal('consultationModal')" class="button mobile-none">Консультация</button>
+                <button onclick="burgerMenu()" class="burger-button">
+                    <div class="burger-line"></div>
+                    <div class="burger-line middle-line"></div>
+                    <div class="burger-line"></div>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- burger -->
+    <div class="burger burger-none">
+        <div class="burger-block column container gap-10">
+            <div class="burger-subblock burger-logo space-between align-center">
+                <a href="#">
+                    <img src="assets/img/logo/logo.png" alt="Arenovation" class="logo">
+                </a>
+                <button onclick="burgerMenu()" class="burger-button">
+                    <div class="burger-line"></div>
+                    <div class="burger-line middle-line"></div>
+                    <div class="burger-line"></div>
+                </button>
+            </div>
+            <a href="#about" class="nav-link text-white" onclick="burgerMenu()">О нас</a>
+            <a href="#services" class="nav-link text-white" onclick="burgerMenu()">Услуги</a>
+            <a href="#portfolio" class="nav-link text-white" onclick="burgerMenu()">Портфолио</a>
+            <a href="#reviews" class="nav-link text-white" onclick="burgerMenu()">Отзывы</a>
+            <button onclick="openModal('consultationModal'); burgerMenu();" class="button">Бесплатная
+                консультация</button>
+        </div>
+    </div>
+    <!-- burger -->
+
+    <!-- main -->
+    <main>
+        <!-- banner -->
+        <div class="banner center">
+            <div class="banner-block column center gap-20">
+                <h1 class="text-white banner-text">Ваш <span class="emerald">идеальный</span> дом <br> <span
+                        class="space"></span> - наш общий <span class="emerald">проект!</span></h1>
+                <button onclick="openModal('consultationModal')" class="button banner-button center">Бесплатная
+                    консультация</button>
+            </div>
+        </div>
+        <!-- banner -->
+
+        <!-- advantages -->
+        <div class="advantages space-between container my-120" id="about">
+            <div class="advantage column align-center gap-20">
+                <div class="advantage_icon center">
+                    🎨
+                </div>
+                <h3 class="advantage_title">Уникальный дизайн</h3>
+                <p class="advantage_text">
+                    Дизайн-проекты, разработанные с учетом ваших предпочтений в сотрудничестве с опытными дизайнерами.
+                </p>
+            </div>
+
+            <div class="advantage column align-center gap-20">
+                <div class="advantage_icon center">
+                    💰
+                </div>
+                <h3 class="advantage_title">Прозрачная смета</h3>
+                <p class="advantage_text">Подробные сметы без скрытых платежей, предлагающие доступные варианты ремонта.
+                </p>
+            </div>
+
+            <div class="advantage column align-center gap-20">
+                <div class="advantage_icon center">
+                    👨‍💼
+                </div>
+                <h3 class="advantage_title">Персональный менеджер</h3>
+                <p class="advantage_text">Закрепленный менеджер контролирует сроки, качество работ и обеспечивает
+                    постоянную связь.</p>
+            </div>
+        </div>
+        <!-- advantages -->
+
+        <!-- products -->
+        <div class="products container my-120 column" id="services">
+            <h2 class="section-title">Наши услуги</h2>
+            <!-- product -->
+            <div tabindex="1" onblur="accardion(this)" onfocus="accardion(this)" class="product">
+                <div class="product_title space-between">
+                    <h3 class="title">Проектирование и дизайн интерьера</h3>
+                    <span class="accordion-icon">›</span>
+                </div>
+                <p class="product_text">Разработка 3D-визуализации, подбор материалов и цветовых решений.</p>
+            </div>
+            <!-- product -->
+
+            <!-- product -->
+            <div tabindex="1" onblur="accardion(this)" onfocus="accardion(this)" class="product">
+                <div class="product_title space-between">
+                    <h3 class="title">Умный дом и инженерные системы</h3>
+                    <span class="accordion-icon">›</span>
+                </div>
+                <p class="product_text">Установка теплых полов, системы «умный свет», вентиляции и кондиционирования.
+                </p>
+            </div>
+            <!-- product -->
+
+            <!-- product -->
+            <div tabindex="1" onblur="accardion(this)" onfocus="accardion(this)" class="product">
+                <div class="product_title space-between">
+                    <h3 class="title">Авторский надзор</h3>
+                    <span class="accordion-icon">›</span>
+                </div>
+                <p class="product_text">Контроль качества выполнения работ на всех этапах ремонта.</p>
+            </div>
+            <!-- product -->
+
+            <!-- product -->
+            <div tabindex="1" onblur="accardion(this)" onfocus="accardion(this)" class="product">
+                <div class="product_title space-between">
+                    <h3 class="title">Черновые и подготовительные работы</h3>
+                    <span class="accordion-icon">›</span>
+                </div>
+                <p class="product_text">Демонтаж, выравнивание стен/полов, шумоизоляция, разводка коммуникаций.</p>
+            </div>
+            <!-- product -->
+
+            <!-- product -->
+            <div tabindex="1" onblur="accardion(this)" onfocus="accardion(this)" class="product">
+                <div class="product_title space-between">
+                    <h3 class="title">Экспресс-ремонт под сдачу</h3>
+                    <span class="accordion-icon">›</span>
+                </div>
+                <p class="product_text">Бюджетные решения для арендодателей с гарантией сроков.</p>
+            </div>
+            <!-- product -->
+        </div>
+        <!-- products -->
+
+        <!-- portfolio -->
+        <div class="portfolio container my-120" id="portfolio">
+            <h2 class="section-title blue-header">Наши работы</h2>
+            <div class="slider-wraper">
+                <!-- slide -->
+                <div class="slide active">
+                    <img src="assets/img/portfolio/01.jpg" alt="Ремонт детской комнаты">
+                    <div class="slider-title">Ремонт детской комнаты / 2024-2025</div>
+                </div>
+                <!-- slide -->
+
+                <!-- slide -->
+                <div class="slide">
+                    <img src="assets/img/portfolio/03.jpg" alt="Ремонт под ключ">
+                    <div class="slider-title">Ремонт под ключ / 2023-2024</div>
+                </div>
+                <!-- slide -->
+
+                <!-- slide -->
+                <div class="slide">
+                    <img src="assets/img/portfolio/02.jpg" alt="Ремонт кухни">
+                    <div class="slider-title">Ремонт кухни / 2022-2023</div>
+                </div>
+                <!-- slide -->
+            </div>
+
+            <div class="slider-controls">
+                <div class="state-slider"></div>
+                <div class="slider-buttons">
+                    <button onclick="slider(-1)" class="slider-btn btn-prev">◁</button>
+                    <button onclick="slider(1)" class="slider-btn btn-next">▷</button>
+                </div>
+            </div>
+        </div>
+        <!-- portfolio -->
+
+        <!-- reviews -->
+        <div class="reviews container my-120" id="reviews">
+            <h2 class="section-title blue-header">Отзывы клиентов</h2>
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button onclick="tab(0);" class="tab-btn active">Мария</button>
+                    <button onclick="tab(1);" class="tab-btn">Саша</button>
+                    <button onclick="tab(2);" class="tab-btn">Света</button>
+                </div>
+                <div class="tabs">
+                    <!-- tab -->
+                    <div class="tab space-between active">
+                        <div class="tab-subblock column gap-10">
+                            <p class="tab-text">"Я очень довольна ремонтом своей квартиры под ключ! Все было сделано
+                                профессионально, быстро и качественно. Результат превзошел все мои ожидания. Большое
+                                спасибо
+                                команде мастеров за их труд и внимание к деталям!"</p>
+                            <h3 class="tab-title">- Мария</h3>
+                        </div>
+                        <img src="assets/img/portfolio/03.jpg" alt="Отзыв Марии" class="tab-img">
+                    </div>
+                    <!-- tab -->
+
+                    <!-- tab -->
+                    <div class="tab space-between">
+                        <div class="tab-subblock column gap-10">
+                            <p class="tab-text">"Ремонт кухни прошел на высшем уровне! Все мои пожелания были учтены, и
+                                кухня получилась именно такой, как я мечтал. Спасибо за профессионализм, оперативность и
+                                индивидуальный подход!"</p>
+                            <h3 class="tab-title">- Саша</h3>
+                        </div>
+                        <img src="assets/img/portfolio/02.jpg" alt="Отзыв Саши" class="tab-img">
+                    </div>
+                    <!-- tab -->
+
+                    <!-- tab -->
+                    <div class="tab space-between">
+                        <div class="tab-subblock column gap-10">
+                            <p class="tab-text">"Мы в восторге от ремонта детской комнаты! Все сделано с любовью и
+                                заботой о
+                                ребенке. Комната получилась яркой, уютной и функциональной. Спасибо за креативный подход
+                                и
+                                отличное качество работы!"</p>
+                            <h3 class="tab-title">- Света</h3>
+                        </div>
+                        <img src="assets/img/portfolio/01.jpg" alt="Отзыв Светы" class="tab-img">
+                    </div>
+                    <!-- tab -->
+                </div>
+            </div>
+        </div>
+        <!-- reviews -->
+
+        <!-- form -->
+        <form class="form container my-120" id="contactForm" novalidate>
+            <img src="assets/img/logo/favicon.png" alt="Arenovation" class="favicon-logo">
+
+            <div class="form-subblock column gap-10">
+                <h2 class="form-title">Остались вопросы?</h2>
+                <p class="form-text">Оставьте заявку на получение бесплатной консультации!</p>
+
+                <div class="input-group">
+                    <input class="input my-10" type="text" name="name" placeholder="Имя" required>
+                    <div class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <input class="input" type="email" name="email" placeholder="Почта" required>
+                    <div class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <input class="input" type="tel" name="phone" placeholder="Телефон" required>
+                    <div class="error-message"></div>
+                </div>
+
+                <button type="submit" class='button my-10'>Отправить заявку</button>
+            </div>
+        </form>
+        <!-- form -->
+
+        <!-- Modal -->
+        <div id="consultationModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('consultationModal')">&times;</span>
+                <h2 class="form-title">Бесплатная консультация</h2>
+                <p class="form-text">Оставьте свои данные и мы свяжемся с вами в течение 30 минут</p>
+
+                <form id="modalForm" class="column gap-10" novalidate>
+                    <div class="input-group">
+                        <input class="input" type="text" name="name" placeholder="Ваше имя" required>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <input class="input" type="tel" name="phone" placeholder="Ваш телефон" required>
+                        <div class="error-message"></div>
+                    </div>
+
+                    <button type="submit" class='button my-10'>Получить консультацию</button>
+                </form>
+            </div>
+        </div>
+        <!-- Modal -->
+
+        <script src="assets/js/main.js"></script>
+    </main>
+    <!-- main -->
+
+    <!-- footer -->
+    <footer class="center my-120">
+        <a href="#" class="text-white footer-copy">&copy; 2025 Шарафиев А.Р.</a>
+    </footer>
+    <!-- footer -->
+</body>
+
+</html>
